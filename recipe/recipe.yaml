@@ -23,9 +23,9 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - qiskit >=1.3,<3
-    - numpy >=1.26
-    - scipy >=1.13.1
+    - qiskit >=2.0,<3
+    - numpy >=2.0
+    - scipy >=1.14.1
     - jax >=0.4.30
     - jaxlib >=0.4.30
     # Unconditional, though upstream marks it `sys_platform != "win32"`: a
@@ -42,6 +42,7 @@ tests:
         - qiskit_addon_sqd.fermion
         - qiskit_addon_sqd.qubit
         - qiskit_addon_sqd.subsampling
+        - qiskit_addon_sqd.trim
       pip_check: true
       # noarch installs on every Python at or above python_min, so import-test
       # both ends of that range rather than only the minimum.
