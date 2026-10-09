@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.13.1"
+  version: "0.14.0"
 
 package:
   name: qiskit-addon-sqd
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/q/qiskit-addon-sqd/qiskit_addon_sqd-${{ version }}.tar.gz
-  sha256: 6b275b0d1d3fd72c1b5496872c8217f2597898c34268d1f764e38be0a31eca77
+  sha256: f6bda4553c1a8eceae6544c38c17760f3e56b83819bde233c12b59e1388b2c0a
 
 build:
   noarch: python
