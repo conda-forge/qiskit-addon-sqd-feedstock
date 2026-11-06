@@ -28,9 +28,6 @@ requirements:
     - scipy >=1.14.1
     - jax >=0.4.30
     - jaxlib >=0.4.30
-    # Unconditional, though upstream marks it `sys_platform != "win32"`: a
-    # noarch package cannot vary its dependencies per platform, and `__unix`
-    # above already rules Windows out.
     - pyscf >=2.9
 
 tests:
@@ -40,6 +37,7 @@ tests:
         - qiskit_addon_sqd.configuration_recovery
         - qiskit_addon_sqd.counts
         - qiskit_addon_sqd.fermion
+        - qiskit_addon_sqd.processes
         - qiskit_addon_sqd.qubit
         - qiskit_addon_sqd.subsampling
         - qiskit_addon_sqd.trim
