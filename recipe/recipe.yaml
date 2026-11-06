@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.14.0"
+  version: "0.14.1"
 
 package:
   name: qiskit-addon-sqd
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/q/qiskit-addon-sqd/qiskit_addon_sqd-${{ version }}.tar.gz
-  sha256: f6bda4553c1a8eceae6544c38c17760f3e56b83819bde233c12b59e1388b2c0a
+  sha256: ab7089ef8587833c19e3399332a288fd1e37dec5aa9f1bf63b2878ca707eab56
 
 build:
   noarch: python
@@ -28,9 +28,6 @@ requirements:
     - scipy >=1.14.1
     - jax >=0.4.30
     - jaxlib >=0.4.30
-    # Unconditional, though upstream marks it `sys_platform != "win32"`: a
-    # noarch package cannot vary its dependencies per platform, and `__unix`
-    # above already rules Windows out.
     - pyscf >=2.9
 
 tests:
@@ -40,6 +37,7 @@ tests:
         - qiskit_addon_sqd.configuration_recovery
         - qiskit_addon_sqd.counts
         - qiskit_addon_sqd.fermion
+        - qiskit_addon_sqd.processes
         - qiskit_addon_sqd.qubit
         - qiskit_addon_sqd.subsampling
         - qiskit_addon_sqd.trim
